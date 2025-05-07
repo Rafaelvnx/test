@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home - Billy Rafael</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <!-- AOS CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <style>
+    @font-face {
+      font-family: 'MyCustomFont';
+      src: url('assets/font/Lokeya.ttf') format('truetype');
+    }
+
+    body {
+      background-color: white;
+    }
+
+    .navbar {
+      background-color: rgba(0, 0, 0, 0.5);
+      transition: all 0.5s ease;
+    }
+    .navbar.scrolled {
+      background-color: rgba(0, 0, 0, 0.8);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      transform: scale(1.02);
+    }
+    .navbar-brand {
+      font-family: 'MyCustomFont', sans-serif;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      color: white;
+    }
+    .navbar-brand img {
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+    }
+    .nav-link {
+      font-family: 'MyCustomFont', sans-serif;
+      text-transform: uppercase;
+      color: white !important;
+      position: relative;
+    }
+    .nav-link::after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 2px;
+      background: white;
+      transition: width 0.3s;
+      margin: auto;
+    }
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .carousel-item {
+      height: 100vh;
+      min-height: 400px;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+
+    .carousel-caption {
+      top: 50%;
+      transform: translateY(-50%);
+      bottom: auto;
+      position: absolute;
+      z-index: 1; /* Pastikan caption ada di atas gambar */
+    }
+
+    .carousel-caption .overlay {
+      background-color: rgba(0,0,0,0.7);
+      padding: 15px;
+      margin-top: 10px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .carousel-caption i {
+      font-size: 3rem;
+      color: white;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .carousel-caption h5 {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: white;
+    }
+
+    .small-circle {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid white;
+      margin: 10px 0;
+      transition: transform 0.3s ease;
+    }
+
+    .small-circle:hover {
+      transform: scale(1.2);
+    }
+
+    .carousel-caption p {
+      color: white;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+      margin-bottom: 0;
+    }
+
+    .carousel-caption a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .carousel-caption a:hover {
+      color: #ff5733; /* Ubah warna saat hover (opsional) */
+    }
+
+    .carousel-indicators button {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: white;
+    }
+
+    .carousel-control-prev, .carousel-control-next {
+      z-index: 2; /* Pastikan tombol kontrol ada di atas elemen lain */
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav id="navbar" class="navbar navbar-expand-lg fixed-top" data-aos="zoom-in-down" data-aos-duration="800">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">
+      <img src="assets/image/logo/d5a99767b1fa005b370d577888fad490-removebg-preview (1).png" alt="Logo"> Billy Rafael
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="tentangsaya.html">Tentang Saya</a></li>
+        <li class="nav-item"><a class="nav-link" href="portofolio.html">Portofolio</a></li>
+        <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
+        <li class="nav-item"><a class="nav-link" href="skill.html">Skill</a></li>
+        <li class="nav-item"><a class="nav-link" href="pengalaman.html">Pengalaman</a></li>
+        <li class="nav-item"><a class="nav-link" href="prestasi.html">Prestasi</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Carousel -->
+<div id="mainCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+  <div class="carousel-inner">
+    <!-- Slide 1 -->
+    <div class="carousel-item active" style="background-image: url('assets/image/fitur/saya.jpg');">
+      <div class="carousel-caption">
+        <a href="tentangsaya.html">
+          <i class="fas fa-user"></i>
+          <h5>Tentang Saya</h5>
+          <img src="assets/image/menu/tentang%20saya.jpeg" class="small-circle" alt="Tentang Saya">
+          <div class="overlay">
+            <p>mengenal tentang saya lebih dekat</p>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="carousel-item" style="background-image: url('assets/image/fitur/call.jpg');">
+      <div class="carousel-caption">
+        <a href="kontak.html">
+          <i class="fas fa-phone-alt"></i>
+          <h5>Kontak Saya</h5>
+          <img src="assets/image/menu/kontak%20saya.jpeg" class="small-circle" alt="Kontak Saya">
+          <div class="overlay">
+            <p>hubungi saya lewat media sosial</p>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="carousel-item" style="background-image: url('assets/image/fitur/follo.jpg');">
+      <div class="carousel-caption">
+        <a href="portofolio.html">
+          <i class="fas fa-briefcase"></i>
+          <h5>Portofolio</h5>
+          <img src="assets/image/menu/portofolio.jpeg" class="small-circle" alt="Portofolio">
+          <div class="overlay">
+            <p>kumpulan hasil karya saya</p>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <!-- Slide 4 -->
+    <div class="carousel-item" style="background-image: url('assets/image/fitur/kemampuan.jpg');">
+      <div class="carousel-caption">
+        <a href="skill.html">
+          <i class="fas fa-cogs"></i>
+          <h5>Kemampuan</h5>
+          <img src="assets/image/menu/kemampuan%20sata.jpeg" class="small-circle" alt="Kemampuan">
+          <div class="overlay">
+            <p>skill yang saya kuasai</p>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <!-- Slide 5 -->
+    <div class="carousel-item" style="background-image: url('assets/image/fitur/pengalaman.jpg');">
+      <div class="carousel-caption">
+        <a href="pengalaman.html">
+          <i class="fas fa-trophy"></i>
+          <h5>Pengalaman</h5>
+          <img src="assets/image/menu/pengalaman%20saya.jpeg" class="small-circle" alt="Pengalaman">
+          <div class="overlay">
+            <p>pengalaman kerja saya</p>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <!-- Slide 6 -->
+    <div class="carousel-item" style="background-image: url('assets/image/fitur/achiv.jpg');">
+      <div class="carousel-caption">
+        <a href="prestasi.html">
+          <i class="fas fa-medal"></i>
+          <h5>Prestasi</h5>
+          <img src="assets/image/menu/prestasi.jpeg" class="small-circle" alt="Prestasi">
+          <div class="overlay">
+            <p>pencapaian saya selama ini</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Indikator -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2"></button>
+    <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="3"></button>
+    <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="4"></button>
+    <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="5"></button>
+  </div>
+
+  <!-- Kontrol carousel -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+  window.addEventListener('scroll', function() {
+    const navbar = document.getElementById('navbar');
+    if (window.scrollY > 50) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  });
+</script>
+
+</body>
+</html>
+
+
+<!-- MINI ALBUM Section -->
+<section class="mini-album-section py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="mini-album-title">MINI ALBUM</h2>
+    </div>
+    <div class="row g-3">
+      <!-- 12 images -->
+      <div class="col-6 col-md-4 col-lg-2">
+        <img src="assets/image/galery/WhatsApp Image 2025-05-06 at 20.00.35 (1).jpeg" class="img-fluid album-img" alt="Album 1">
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <img src="assets/image/galery/WhatsApp Image 2025-05-06 at 20.00.35.jpeg" class="img-fluid album-img" alt="Album 2">
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <img src="assets/image/galery/WhatsApp Image 2025-05-06 at 20.00.36 (1).jpeg" class="img-fluid album-img" alt="Album 3">
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <img src="assets/image/galery/WhatsApp Image 2025-05-06 at 20.00.36.jpeg" class="img-fluid album-img" alt="Album 4">
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <img src="assets/image/galery/WhatsApp Image 2025-05-06 at 20.04.46.jpeg" class="img-fluid album-img" alt="Album 5">
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <img src="assets/image/galery/WhatsApp Image 2025-05-06 at 20.04.47.jpeg" class="img-fluid album-img" alt="Album 6">
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <img src="assets/image/galery/WhatsApp Image 2025-05-06 at 20.05.38.jpeg" class="img-fluid album-img" alt="Album 7">
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <img src="assets/image/galery/WhatsApp Image 2025-05-07 at 11.29.30.jpeg" class="img-fluid album-img" alt="Album 8">
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <img src="assets/image/galery/WhatsApp Image 2025-05-07 at 11.30.19.jpeg" class="img-fluid album-img" alt="Album 9">
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <img src="assets/image/menu/pengalaman saya.jpeg" class="img-fluid album-img" alt="Album 10">
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <img src="assets/image/menu/tentang saya.jpeg" class="img-fluid album-img" alt="Album 11">
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <img src="assets/image/menu/kemampuan sata.jpeg" class="img-fluid album-img" alt="Album 12">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MINI ALBUM Styling -->
+<style>
+/* MINI ALBUM Section */
+.mini-album-section {
+  background-color: #f8f9fa; /* Warna background section */
+}
+.mini-album-title {
+  font-family: 'MyCustomFont', sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+}
+/* Biar semua foto kotak */
+.album-img {
+  width: 100%;
+  height: 150px; /* Tinggi tetap, misal 150px */
+  object-fit: cover; /* Biar gambar ngepas & tetap rapi */
+  filter: grayscale(100%);
+  transition: filter 0.5s ease, transform 0.3s ease;
+}
+.album-img:hover {
+  filter: grayscale(0%);
+  transform: scale(1.05);
+}
+</style>
+
+<!-- FOOTER -->
+<footer class="site-footer py-4">
+  <div class="container text-center">
+    <div class="footer-content">
+      <h5 class="footer-title">Billy Rafael</h5>
+      <ul class="footer-menu list-unstyled d-flex justify-content-center mb-3">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="tentangkami.html">About</a></li>
+        <li><a href="kontakkami.html">Contact</a></li>
+      </ul>
+      <p class="footer-text mb-0">© 2025 Billy Rafael. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- FOOTER Styling -->
+<style>
+.site-footer {
+  background-color: #222; /* Warna background gelap */
+  color: #ddd; /* Warna teks */
+  font-family: 'MyCustomFont', sans-serif;
+}
+.footer-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+.footer-menu {
+  padding-left: 0;
+}
+.footer-menu li {
+  margin: 0 10px;
+}
+.footer-menu a {
+  color: #ddd;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.footer-menu a:hover {
+  color: #0d6efd; /* Hover warna biru */
+}
+.footer-text {
+  font-size: 0.9rem;
+}
+</style>

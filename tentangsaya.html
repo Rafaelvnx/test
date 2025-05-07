@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home - Billy Rafael</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <!-- AOS CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <style>
+    @font-face {
+      font-family: 'MyCustomFont';
+      src: url('assets/font/Lokeya.ttf') format('truetype');
+    }
+
+    body {
+      background-color: white;
+      font-family: 'MyCustomFont', sans-serif;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: rgba(0, 0, 0, 0.5);
+      transition: all 0.5s ease;
+    }
+
+    .navbar.scrolled {
+      background-color: rgba(0, 0, 0, 0.8);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      transform: scale(1.02);
+    }
+
+    .navbar-brand {
+      font-family: 'MyCustomFont', sans-serif;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      color: white;
+    }
+
+    .navbar-brand img {
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+    }
+
+    .nav-link {
+      font-family: 'MyCustomFont', sans-serif;
+      text-transform: uppercase;
+      color: white !important;
+      position: relative;
+    }
+
+    .nav-link::after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 2px;
+      background: white;
+      transition: width 0.3s;
+      margin: auto;
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    /* TENTANG SAYA */
+    .tentang-saya-section {
+      padding: 80px 0;
+    }
+
+    .tentang-title {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      color: #333;
+    }
+
+    .tentang-desc {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      color: #555;
+      margin-bottom: 1.5rem;
+    }
+
+    .img-tentang {
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0px 4px 20px rgba(0,0,0,0.1);
+    }
+
+    /* FOOTER */
+    .site-footer {
+      background-color: #222;
+      color: #ddd;
+      font-family: 'MyCustomFont', sans-serif;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    .footer-title {
+      font-size: 1.8rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      color: #ffffff;
+    }
+
+    .footer-menu {
+      padding-left: 0;
+      list-style: none;
+      margin-bottom: 20px;
+    }
+
+    .footer-menu li {
+      display: inline-block;
+      margin: 0 10px;
+    }
+
+    .footer-menu a {
+      color: #ddd;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer-menu a:hover {
+      color: #0d6efd;
+    }
+
+    .footer-text {
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav id="navbar" class="navbar navbar-expand-lg fixed-top" data-aos="zoom-in-down" data-aos-duration="800">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">
+      <img src="assets/image/logo/d5a99767b1fa005b370d577888fad490-removebg-preview (1).png" alt="Logo"> Billy Rafael
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="tentangsaya.html">Tentang Saya</a></li>
+        <li class="nav-item"><a class="nav-link" href="portofolio.html">Portofolio</a></li>
+        <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
+        <li class="nav-item"><a class="nav-link" href="skill.html">Skill</a></li>
+        <li class="nav-item"><a class="nav-link" href="pengalaman.html">Pengalaman</a></li>
+        <li class="nav-item"><a class="nav-link" href="prestasi.html">Prestasi</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- TENTANG SAYA Section -->
+<section id="tentang" class="tentang-saya-section">
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- Gambar -->
+      <div class="col-lg-6 mb-4 mb-lg-0">
+        <div class="d-flex flex-column gap-4">
+          <img src="assets/image/fitur/meee.jpeg" alt="Foto 1" class="img-tentang img-fluid">
+          <img src="assets/image/menu/kemampuan sata.jpeg" alt="Foto 2" class="img-tentang img-fluid">
+          <img src="assets/image/menu/tentang saya.jpeg" alt="Foto 3" class="img-tentang img-fluid">
+        </div>
+      </div>
+
+      <!-- Deskripsi -->
+      <div class="col-lg-6" data-aos="fade-left">
+        <h2 class="tentang-title mb-4">Tentang Saya</h2>
+        <p class="tentang-desc">
+          Halo, saya <strong>Billy Rafael</strong>.<br>
+          Saya seorang profesional yang memiliki minat dan pengalaman dalam bidang desain grafis, fotografi, videografi, dan pengembangan web. Dengan keahlian yang saya miliki, saya siap memberikan kontribusi positif melalui kreativitas, inovasi, dan dedikasi tinggi dalam setiap proyek. Saya selalu berusaha untuk berkembang, beradaptasi, dan memberikan hasil terbaik untuk mendukung tujuan lingkup kerja saya.
+        </p>
+
+        <div class="mt-5">
+          <h3 class="tentang-title">Data Diri</h3>
+          <ul style="list-style: none; padding: 0; font-size: 1.1rem; color: #555;">
+            <li><i class="fas fa-user"></i> <strong>Nama:</strong> Billy Rafael</li>
+            <li><i class="fas fa-birthday-cake"></i> <strong>Tempat, Tanggal Lahir:</strong>Sentibak, 21 april 2005</li>
+            <li><i class="fas fa-map-marker-alt"></i> <strong>Alamat saat ini:</strong> Pontianak, Indonesia</li>
+            <li><i class="fas fa-envelope"></i> <strong>Email:</strong> billyrafael1140@email.com</li>
+            <li><i class="fas fa-phone"></i> <strong>No HP:</strong> +62 85242808008</li>
+          </ul>
+
+          <h3 class="tentang-title mt-5">Tujuan Karir</h3>
+          <p class="tentang-desc">
+            Saya berkomitmen untuk terus mengembangkan kemampuan di bidang desain grafis, fotografi, videografi, dan pengembangan web. Tujuan saya adalah bergabung dengan lingkungan kerja saya yang dapat memaksimalkan potensi saya, sekaligus berkontribusi dalam menciptakan solusi kreatif dan inovatif yang mendukung pertumbuhan ruang kerja saya.
+          </p>
+
+          <h3 class="tentang-title mt-5">Keahlian Utama</h3>
+          <ul style="list-style: none; padding: 0; font-size: 1.1rem; color: #555;">
+            <li>✔️ Desain Grafis (Photoshop, Illustrator)</li>
+            <li>✔️ Fotografi dan Videografi</li>
+            <li>✔️ Pengembangan Web (HTML, CSS, Bootstrap, dasar PHP)</li>
+            <li>✔️ Editing Video (Premiere Pro, After Effects)</li>
+          </ul>
+
+          <h3 class="tentang-title mt-5">Pendidikan</h3>
+          <ul style="list-style: none; padding: 0; font-size: 1.1rem; color: #555;">
+            <li><strong>STMIK PONTIANAK <</strong> – Teknik Informatika (2024 - SEKARANG)</li>
+            <li><strong>SMAN 3 SINTANG</strong> – IPA (2020 - 2023)</li>
+          </ul>
+
+          <blockquote style="font-style: italic; color: #666; margin-top: 30px; border-left: 5px solid #0d6efd; padding-left: 15px;">
+            "Saya percaya bahwa kerja keras, kreativitas, dan semangat belajar adalah kunci untuk mencapai kesuksesan."
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="container">
+    <h3 class="footer-title">Billy Rafael</h3>
+    <ul class="footer-menu">
+      <li><a href="#">Home</a></li>
+      <li><a href="#tentang">Tentang Saya</a></li>
+      <li><a href="#portofolio">Portofolio</a></li>
+      <li><a href="#kontak">Kontak</a></li>
+    </ul>
+    <p class="footer-text">&copy; 2025 Billy Rafael. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- Script -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+
+  // Navbar scroll effect
+  window.addEventListener('scroll', function() {
+    const navbar = document.getElementById('navbar');
+    if (window.scrollY > 50) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  });
+</script>
+
+</body>
+</html>

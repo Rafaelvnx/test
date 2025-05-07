@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home - Billy Rafael</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <!-- AOS CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <style>
+    @font-face {
+      font-family: 'MyCustomFont';
+      src: url('assets/font/Lokeya.ttf') format('truetype');
+    }
+
+    body {
+      background-color: white;
+      font-family: 'MyCustomFont', sans-serif;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: rgba(0, 0, 0, 0.5);
+      transition: all 0.5s ease;
+    }
+
+    .navbar.scrolled {
+      background-color: rgba(0, 0, 0, 0.8);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      transform: scale(1.02);
+    }
+
+    .navbar-brand {
+      font-family: 'MyCustomFont', sans-serif;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      color: white;
+    }
+
+    .navbar-brand img {
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+    }
+
+    .nav-link {
+      font-family: 'MyCustomFont', sans-serif;
+      text-transform: uppercase;
+      color: white !important;
+      position: relative;
+    }
+
+    .nav-link::after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 2px;
+      background: white;
+      transition: width 0.3s;
+      margin: auto;
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    /* TENTANG SAYA */
+    .tentang-saya-section {
+      padding: 80px 0;
+    }
+
+    .tentang-title {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      color: #333;
+    }
+
+    .tentang-desc {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      color: #555;
+      margin-bottom: 1.5rem;
+    }
+
+    .img-tentang {
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0px 4px 20px rgba(0,0,0,0.1);
+    }
+
+    /* FOOTER */
+    .site-footer {
+      background-color: #222;
+      color: #ddd;
+      font-family: 'MyCustomFont', sans-serif;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    .footer-title {
+      font-size: 1.8rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      color: #ffffff;
+    }
+
+    .footer-menu {
+      padding-left: 0;
+      list-style: none;
+      margin-bottom: 20px;
+    }
+
+    .footer-menu li {
+      display: inline-block;
+      margin: 0 10px;
+    }
+
+    .footer-menu a {
+      color: #ddd;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer-menu a:hover {
+      color: #0d6efd;
+    }
+
+    .footer-text {
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav id="navbar" class="navbar navbar-expand-lg fixed-top" data-aos="zoom-in-down" data-aos-duration="800">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">
+      <img src="assets/image/logo/d5a99767b1fa005b370d577888fad490-removebg-preview (1).png" alt="Logo"> Billy Rafael
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="tentangsaya.html">Tentang Saya</a></li>
+        <li class="nav-item"><a class="nav-link" href="portofolio.html">Portofolio</a></li>
+        <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
+        <li class="nav-item"><a class="nav-link" href="skill.html">Skill</a></li>
+        <li class="nav-item"><a class="nav-link" href="pengalaman.html">Pengalaman</a></li>
+        <li class="nav-item"><a class="nav-link" href="prestasi.html">Prestasi</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- PORTOFOLIO Section -->
+<section id="portofolio" class="pt-5 pb-5">
+    <div class="container">
+      <h2 class="text-center mb-5">Portofolio Singkat</h2>
+      <!-- Desain Grafis -->
+      <h1 class="text-center mb-5">Design Grafis</h1>
+      <div class="row text-center">
+        <div class="col-md-4 mb-4">
+          <img src="assets/image/menu/WhatsApp Image 2025-05-07 at 11.29.30.jpeg" alt="Desain 1" class="img-fluid rounded shadow">
+          <p class="mt-2">Desain logo.</p>
+        </div>
+        <div class="col-md-4 mb-4">
+          <img src="assets/image/menu/WhatsApp Image 2025-05-07 at 12.48.50.jpeg" alt="Desain 2" class="img-fluid rounded shadow">
+          <p class="mt-2">Desain Poster.</p>
+        </div>
+        <div class="col-md-4 mb-4">
+          <img src="assets/image/menu/WhatsApp Image 2025-05-07 at 12.50.29.jpeg" alt="Desain 3" class="img-fluid rounded shadow">
+          <p class="mt-2">Desain Jersey.</p>
+        </div>
+      </div>
+    </div>
+</section>
+
+<!-- Fotografis Section -->
+<section id="fotografi" class="container my-5">
+  <h1 class="text-center mb-5">Fotografi</h1>
+  <div class="row text-center">
+    <div class="col-md-4 mb-4">
+      <img src="assets/image/menu/del.jpeg" alt="Fotografi 1" class="img-tall rounded shadow">
+      <p class="mt-2">Model Fotografi.</p>
+    </div>
+    <div class="col-md-4 mb-4">
+      <img src="assets/image/menu/fut.jpeg" alt="Fotografi 2" class="img-tall rounded shadow">
+      <p class="mt-2">Sport Fotografi.</p>
+    </div>
+    <div class="col-md-4 mb-4">
+      <img src="assets/image/menu/wedd.jpeg" alt="Fotografi 3" class="img-tall rounded shadow">
+      <p class="mt-2">Wedding Fotografi.</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .img-tall {
+    height: 400px; /* Sesuaikan dengan tinggi yang kamu inginkan */
+    object-fit: cover;
+    width: 100%;
+  }
+</style>
+
+<!-- Videografi Section -->
+<section id="videografi" class="container my-5">
+  <h1 class="text-center mb-5">Videografi</h1>
+  <div class="row text-center">
+    <div class="col-md-4 mb-4">
+      <iframe width="100%" height="315" src="https://www.youtube.com/embed/rlN_GwF49CQ" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="col-md-4 mb-4">
+      <iframe width="100%" height="315" src="https://www.youtube.com/embed/ziGcCC1r8q4" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="col-md-4 mb-4">
+      <iframe width="100%" height="315" src="https://www.youtube.com/embed/3_BoDcZwvZ8" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="container">
+    <h3 class="footer-title">Billy Rafael</h3>
+    <ul class="footer-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="tentangsaya.html">Tentang Saya</a></li>
+      <li><a href="portofolio.html">Portofolio</a></li>
+      <li><a href="kontak.html">Kontak</a></li>
+    </ul>
+    <p class="footer-text">© 2025 Billy Rafael. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<!-- AOS JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+</body>
+</html>
